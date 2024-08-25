@@ -92,7 +92,15 @@ struct HomeView: View {
             self.saveCity(cityName)
         }
         .fullScreenCover(isPresented: $isFullScreenPresented) {
-         //TODO: navigate to detail screen
+            GeometryReader{proxy in
+                let topEdge = proxy.safeAreaInsets.top
+                WeatherDetailView(viewModel: WeatherDetailViewModel(),
+                                  isPresented: $isFullScreenPresented,
+                                  forecast: self.viewModel.forecast,
+                                  cityName: self.viewModel.cityName,
+                                  topEdge: topEdge)
+                .ignoresSafeArea(.all, edges: .top)
+            }
         }
     }
     
