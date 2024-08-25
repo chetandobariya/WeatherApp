@@ -10,6 +10,8 @@ import SwiftUI
 
 protocol HomePresenterInput {
     func presentLoadingError(_ response: LoadingError.Response)
+    func presentWeatherForecast(_ response: Home.GetCurrentWeather.Response)
+    func presentCityName(_ response: Home.GetCityName.Response)
 }
 
 class HomePresenter: HomePresenterInput {
@@ -22,6 +24,12 @@ class HomePresenter: HomePresenterInput {
         self.output = HomeViewController(viewModel: viewModel)
     }
 
+    func presentWeatherForecast(_ response: Home.GetCurrentWeather.Response) {
+        DispatchQueue.main.async { [weak self] in
+            let viewModel = Home.GetCurrentWeather.ViewModel(forecast: response.forecast)
+            self?.output.displayWeatherForecast(viewModel)
+        }
+    }
     func presentLoadingError(_ response: LoadingError.Response) {
         DispatchQueue.main.async { [weak self] in
             let errorHelper = ErrorHelper.shared
@@ -29,4 +37,11 @@ class HomePresenter: HomePresenterInput {
             self?.output.displayError(viewModel)
         }
     }
+    func presentCityName(_ response: Home.GetCityName.Response) {
+        DispatchQueue.main.async { [weak self] in
+            let viewModel = Home.GetCityName.ViewModel(city: response.city)
+            self?.output.displayCityName(viewModel)
+        }
+    }
+
 }
