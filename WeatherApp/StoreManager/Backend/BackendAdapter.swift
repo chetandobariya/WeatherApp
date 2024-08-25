@@ -29,6 +29,7 @@ class BackendAdapter: Backend {
         log(message: "method: \(endpoint.api.method)", category: .backend, level: .info)
         log(message: "requestParameters: \(String(describing: endpoint.api.requestParameters))", category: .backend, level: .info)
         
+        //TODO: make reachability service reactive later on
         guard ReachabilityHelper.isConnectedToNetwork() == true else {
             log(message: "No internet connection found", category: .reachability, level: .info)
             completion(.noInternet)
@@ -89,10 +90,10 @@ class BackendAdapter: Backend {
         
         switch code {
         case 401:
-            // Unauthorized - get new token
+            //TODO: handle Unauthorized - get new token
             break
         case 403:
-            // raise force logout from here
+            //TODO: handle raise force logout from here
             break
         default:
             break
