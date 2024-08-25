@@ -10,7 +10,6 @@ import SwiftUI
 
 struct WeatherDataView: View {
     var forecast: Forecast?
-    @StateObject private var viewModel = ImageDownloader()
     
     var body: some View {
         
@@ -54,7 +53,6 @@ struct WeatherDataView: View {
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .leading)
                 }
-                
                 CustomStackView {
                     Label {
                         Text("Humidity")
@@ -77,69 +75,8 @@ struct WeatherDataView: View {
             .frame(maxHeight: .infinity)
             
             if let daily = forecast?.daily {
-                CustomStackView {
-                    Label {
-                        Text("Daily Forecast")
-                    } icon: {
-                        Image(systemName: "calendar")
-                    }
-                } contentView: {
-                    VStack(alignment: .leading, spacing: 10) {
-                        ForEach(daily) { day in
-                            VStack {
-                                HStack(spacing: 15){
-                                    Text(day.currentTime?.dayWord() ?? "")
-                                        .font(.title3.bold())
-                                        .foregroundStyle(.white)
-                                    // max widht...
-                                        .frame(width: 60,alignment: .leading)
-                                    
-                                    if let image = viewModel.downloadedImage {
-                                        Image(uiImage: image)
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(height: 30)
-                                    } else {
-                                        ProgressView()
-                                            .onAppear {
-                                                viewModel.downloadImage(from: day.weather?.first?.weatherIconURL?.absoluteString)
-                                            }
-                                    }
-                                    
-                                    Text("\(Int(day.temperature?.min ?? 0))")
-                                        .font(.title3.bold())
-                                        .foregroundStyle(.secondary)
-                                        .foregroundStyle(.white)
-                                    
-                                    // Progress Bar....
-                                    ZStack(alignment: .leading) {
-                                        
-                                        Capsule()
-                                            .fill(.tertiary)
-                                            .foregroundStyle(.white)
-                                        
-                                        // for width...
-                                        GeometryReader{proxy in
-                                            
-                                            Capsule()
-                                                .fill(.linearGradient(.init(colors: [.orange,.red]), startPoint: .leading, endPoint: .trailing))
-                                                .frame(width: ((day.temperature?.day ?? 1) / 140) * proxy.size.width)
-                                        }
-                                    }
-                                    .frame(height: 4)
-                                    
-                                    Text("\(Int(day.temperature?.max ?? 0))˚")
-                                        .font(.title3.bold())
-                                        .foregroundStyle(.white)
-                                }
-                                Divider()
-                            }
-                            .padding(.vertical,8)
-                        }
-                    }
-                }
+               DailyForecastView(daily: daily)
             }
-            
         }
     }
 }

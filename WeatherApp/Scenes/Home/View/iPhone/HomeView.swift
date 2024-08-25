@@ -76,7 +76,6 @@ struct HomeView: View {
                         .foregroundColor(.white)
                 }
             }
-            
         }
         .onAppear {
             self.configurator.configure(view: self)
@@ -89,7 +88,7 @@ struct HomeView: View {
             self.checkIfLocationPresented()
         }
         .onReceive(viewModel.$cityName) { cityName in
-            self.saveCity(cityName)
+            ViewHelper.shared.saveCity(cityName)
         }
         .fullScreenCover(isPresented: $isFullScreenPresented) {
             GeometryReader{proxy in
@@ -106,7 +105,7 @@ struct HomeView: View {
     
     private func checkIfLocationPresented() {
         guard self.weatherDataRequested == false else { return }
-        if let storedLocation = self.getStoredLocation() {
+        if let storedLocation = ViewHelper.shared.getStoredLocation() {
             self.fetchCurrentWeatherData(lat: storedLocation.lat, lon: storedLocation.lon)
             // delay bit in order to avoid race condition.
             delay(1) {
@@ -130,7 +129,7 @@ struct HomeView: View {
             if let lat = placemarks?.first?.location?.coordinate.latitude,
                let lon = placemarks?.first?.location?.coordinate.longitude {
                 self.viewModel.cityName = location
-                self.saveLocation(LocationData(lat: lat, lon: lon))
+                ViewHelper.shared.saveLocation(LocationData(lat: lat, lon: lon))
                 self.fetchCurrentWeatherData(lat: lat, lon: lon)
             }
         }
@@ -151,38 +150,13 @@ struct HomeView: View {
     }
     
     func fetchCityName(lat: Double, lon: Double) {
-        if let cityName = self.getCityName(), !cityName.isEmpty {
+        if let cityName = ViewHelper.shared.getCityName(), !cityName.isEmpty {
             self.viewModel.cityName = cityName
         } else {
             let request = Home.GetCityName.Request(lat: lat, lon: lon)
             self.output.getCityName(request)
         }
     }
-    
-    
-    func saveCity(_ cityName: String) {
-        guard !cityName.isEmpty else { return }
-        UserDefaults.standard.setValue(cityName, forKey: "cityName")
-    }
-    
-    func getCityName() -> String? {
-        UserDefaults.standard.string(forKey: "cityName")
-    }
-    
-    func saveLocation(_ location: LocationData) {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(location) {
-            UserDefaults.standard.set(encoded, forKey: "savedLocation")
-        }
-    }
-    func getStoredLocation() -> LocationData? {
-        if let savedLocationData = UserDefaults.standard.data(forKey: "savedLocation") {
-            let decoder = JSONDecoder()
-            return try? decoder.decode(LocationData.self, from: savedLocationData)
-        }
-        return nil
-    }
-    
 }
 
 extension HomeView {
