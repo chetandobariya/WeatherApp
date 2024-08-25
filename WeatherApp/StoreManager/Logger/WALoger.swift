@@ -35,7 +35,7 @@ class WALogger {
     static let shared = WALogger()
     
     func logMessageIntoConsole(message: String, category: LogCategory, level: LogLevel) {
-        let logger = Logger.init(subsystem: "WeatherDemo", category: category.rawValue)
+        let logger = Logger.init(subsystem: "WeatherApp", category: category.rawValue)
 
         switch level {
         case .debug:
