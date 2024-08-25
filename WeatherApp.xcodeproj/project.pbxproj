@@ -45,6 +45,14 @@
 		110982A62C7B99AA006D170A /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982A52C7B99AA006D170A /* WeatherCell.swift */; };
 		110982A82C7B99D1006D170A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982A72C7B99D1006D170A /* Date+Extension.swift */; };
 		110982AA2C7B9A50006D170A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982A92C7B9A50006D170A /* LocationManager.swift */; };
+		110982B72C7B9B53006D170A /* WeatherDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982AF2C7B9B53006D170A /* WeatherDetailPresenter.swift */; };
+		110982B82C7B9B53006D170A /* WeatherDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982B02C7B9B53006D170A /* WeatherDetailRouter.swift */; };
+		110982B92C7B9B53006D170A /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982B12C7B9B53006D170A /* WeatherDetailViewController.swift */; };
+		110982BA2C7B9B53006D170A /* IPadWeatherDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982B22C7B9B53006D170A /* IPadWeatherDetailView.swift */; };
+		110982BB2C7B9B53006D170A /* WeatherDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982B32C7B9B53006D170A /* WeatherDetailInteractor.swift */; };
+		110982BC2C7B9B53006D170A /* WeatherDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982B42C7B9B53006D170A /* WeatherDetailView.swift */; };
+		110982BD2C7B9B53006D170A /* WeatherDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982B52C7B9B53006D170A /* WeatherDetailModel.swift */; };
+		110982BE2C7B9B53006D170A /* WeatherDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982B62C7B9B53006D170A /* WeatherDetailConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +123,14 @@
 		110982A52C7B99AA006D170A /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		110982A72C7B99D1006D170A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		110982A92C7B9A50006D170A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		110982AF2C7B9B53006D170A /* WeatherDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailPresenter.swift; sourceTree = "<group>"; };
+		110982B02C7B9B53006D170A /* WeatherDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailRouter.swift; sourceTree = "<group>"; };
+		110982B12C7B9B53006D170A /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
+		110982B22C7B9B53006D170A /* IPadWeatherDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPadWeatherDetailView.swift; sourceTree = "<group>"; };
+		110982B32C7B9B53006D170A /* WeatherDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailInteractor.swift; sourceTree = "<group>"; };
+		110982B42C7B9B53006D170A /* WeatherDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailView.swift; sourceTree = "<group>"; };
+		110982B52C7B9B53006D170A /* WeatherDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailModel.swift; sourceTree = "<group>"; };
+		110982B62C7B9B53006D170A /* WeatherDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +253,7 @@
 		110982502C7B8D23006D170A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				110982AB2C7B9B26006D170A /* WeatherDetail */,
 				110982832C7B95C4006D170A /* Home */,
 				110982582C7B8E40006D170A /* README.md */,
 			);
@@ -390,6 +407,45 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		110982AB2C7B9B26006D170A /* WeatherDetail */ = {
+			isa = PBXGroup;
+			children = (
+				110982AE2C7B9B3D006D170A /* View */,
+				110982B12C7B9B53006D170A /* WeatherDetailViewController.swift */,
+				110982B32C7B9B53006D170A /* WeatherDetailInteractor.swift */,
+				110982AF2C7B9B53006D170A /* WeatherDetailPresenter.swift */,
+				110982B52C7B9B53006D170A /* WeatherDetailModel.swift */,
+				110982B02C7B9B53006D170A /* WeatherDetailRouter.swift */,
+				110982B62C7B9B53006D170A /* WeatherDetailConfigurator.swift */,
+			);
+			path = WeatherDetail;
+			sourceTree = "<group>";
+		};
+		110982AC2C7B9B2E006D170A /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				110982B42C7B9B53006D170A /* WeatherDetailView.swift */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		110982AD2C7B9B36006D170A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				110982B22C7B9B53006D170A /* IPadWeatherDetailView.swift */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		110982AE2C7B9B3D006D170A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				110982AD2C7B9B36006D170A /* iPad */,
+				110982AC2C7B9B2E006D170A /* iPhone */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -541,6 +597,14 @@
 				110982632C7B91F0006D170A /* Forecast.swift in Sources */,
 				110982692C7B9222006D170A /* DailyWeather.swift in Sources */,
 				110982722C7B927B006D170A /* PreviewDevice.swift in Sources */,
+				110982B72C7B9B53006D170A /* WeatherDetailPresenter.swift in Sources */,
+				110982B82C7B9B53006D170A /* WeatherDetailRouter.swift in Sources */,
+				110982B92C7B9B53006D170A /* WeatherDetailViewController.swift in Sources */,
+				110982BA2C7B9B53006D170A /* IPadWeatherDetailView.swift in Sources */,
+				110982BB2C7B9B53006D170A /* WeatherDetailInteractor.swift in Sources */,
+				110982BC2C7B9B53006D170A /* WeatherDetailView.swift in Sources */,
+				110982BD2C7B9B53006D170A /* WeatherDetailModel.swift in Sources */,
+				110982BE2C7B9B53006D170A /* WeatherDetailConfigurator.swift in Sources */,
 				110982652C7B9206006D170A /* CurrentWeather.swift in Sources */,
 				110982822C7B9570006D170A /* ErrorHelper.swift in Sources */,
 				110982672C7B9216006D170A /* HourlyWeather.swift in Sources */,
