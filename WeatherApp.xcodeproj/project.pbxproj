@@ -42,6 +42,9 @@
 		1109829E2C7B970C006D170A /* WALoger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109829D2C7B970C006D170A /* WALoger.swift */; };
 		110982A02C7B9775006D170A /* WeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109829F2C7B9775006D170A /* WeatherWorker.swift */; };
 		110982A22C7B97EE006D170A /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982A12C7B97EE006D170A /* UIApplication+Extension.swift */; };
+		110982A62C7B99AA006D170A /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982A52C7B99AA006D170A /* WeatherCell.swift */; };
+		110982A82C7B99D1006D170A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982A72C7B99D1006D170A /* Date+Extension.swift */; };
+		110982AA2C7B9A50006D170A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982A92C7B9A50006D170A /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		1109829D2C7B970C006D170A /* WALoger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WALoger.swift; sourceTree = "<group>"; };
 		1109829F2C7B9775006D170A /* WeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorker.swift; sourceTree = "<group>"; };
 		110982A12C7B97EE006D170A /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		110982A52C7B99AA006D170A /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		110982A72C7B99D1006D170A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		110982A92C7B9A50006D170A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +317,7 @@
 			children = (
 				1109827F2C7B955B006D170A /* ReachabilityHelper.swift */,
 				110982812C7B9570006D170A /* ErrorHelper.swift */,
+				110982A92C7B9A50006D170A /* LocationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -321,6 +328,7 @@
 				1109827B2C7B950E006D170A /* PreviewDevice+Extension.swift */,
 				1109827D2C7B951B006D170A /* View+Extension.swift */,
 				110982A12C7B97EE006D170A /* UIApplication+Extension.swift */,
+				110982A72C7B99D1006D170A /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				1109828C2C7B95ED006D170A /* HomeView.swift */,
+				110982A52C7B99AA006D170A /* WeatherCell.swift */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -514,16 +523,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1109829A2C7B96C5006D170A /* BackendAdapter.swift in Sources */,
+				110982A62C7B99AA006D170A /* WeatherCell.swift in Sources */,
 				110982762C7B9311006D170A /* WeatherAlert.swift in Sources */,
 				1109828F2C7B95ED006D170A /* HomePresenter.swift in Sources */,
 				110982902C7B95ED006D170A /* HomeRouter.swift in Sources */,
 				110982912C7B95ED006D170A /* HomeViewController.swift in Sources */,
 				1109829E2C7B970C006D170A /* WALoger.swift in Sources */,
+				110982AA2C7B9A50006D170A /* LocationManager.swift in Sources */,
 				110982A22C7B97EE006D170A /* UIApplication+Extension.swift in Sources */,
 				110982922C7B95ED006D170A /* IPadHomeView.swift in Sources */,
 				110982932C7B95ED006D170A /* HomeInteractor.swift in Sources */,
 				110982942C7B95ED006D170A /* HomeView.swift in Sources */,
 				110982952C7B95ED006D170A /* HomeModel.swift in Sources */,
+				110982A82C7B99D1006D170A /* Date+Extension.swift in Sources */,
 				110982962C7B95ED006D170A /* HomeConfigurator.swift in Sources */,
 				110982A02C7B9775006D170A /* WeatherWorker.swift in Sources */,
 				110982632C7B91F0006D170A /* Forecast.swift in Sources */,
@@ -708,6 +720,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to provide personalized weather content even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide personalized weather content.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -740,6 +754,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to provide personalized weather content even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide personalized weather content.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
