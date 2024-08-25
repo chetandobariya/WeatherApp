@@ -288,9 +288,9 @@
 		110982502C7B8D23006D170A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				110982582C7B8E40006D170A /* README.md */,
 				110982832C7B95C4006D170A /* Home */,
 				110982AB2C7B9B26006D170A /* WeatherDetail */,
-				110982582C7B8E40006D170A /* README.md */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

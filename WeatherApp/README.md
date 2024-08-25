@@ -24,10 +24,6 @@
 * This folder constains different kind of classes mostly come from VIP architecture for managing pages
 * [For detailed Information](../WeatherApp/Scenes/README.md)
 
-### Services
-
-* This folder contains Service classes whicResh have long lived operations separated from the app's main logic or they communicate with the outside of the app like authentication, push notifications.
-
 ### Stores
 
 * This folder contains Store classes which provide data objects from different kinds of sources like API (Backend), Database (Userdefaults, keychain, database).

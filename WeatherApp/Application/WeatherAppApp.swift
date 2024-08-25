@@ -11,6 +11,7 @@ import SwiftUI
 struct WeatherAppApp: App {
     let homeViewModel = HomeViewModel()
 
+    //TODO: currently iphone screen loaded in ipad app. we can design ipad screen later
     var body: some Scene {
         WindowGroup {
             HomeView(viewModel: homeViewModel)
