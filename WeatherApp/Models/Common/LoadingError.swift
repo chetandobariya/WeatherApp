@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+struct LoadingError {
+   
+    enum LoadingError {
+        case noInternet, timeout, generalFailure(Error), empty
+    }
+    
+    struct Request {
+    }
+    
+    struct Response {
+        let error: LoadingError
+    }
+    
+    struct ViewModel {
+        let title: String
+        let message: String
+    }
+}
