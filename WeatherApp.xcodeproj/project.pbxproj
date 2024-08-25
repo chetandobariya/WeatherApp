@@ -30,6 +30,14 @@
 		1109827E2C7B951B006D170A /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109827D2C7B951B006D170A /* View+Extension.swift */; };
 		110982802C7B955B006D170A /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109827F2C7B955B006D170A /* ReachabilityHelper.swift */; };
 		110982822C7B9570006D170A /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982812C7B9570006D170A /* ErrorHelper.swift */; };
+		1109828F2C7B95ED006D170A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982872C7B95ED006D170A /* HomePresenter.swift */; };
+		110982902C7B95ED006D170A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982882C7B95ED006D170A /* HomeRouter.swift */; };
+		110982912C7B95ED006D170A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982892C7B95ED006D170A /* HomeViewController.swift */; };
+		110982922C7B95ED006D170A /* IPadHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109828A2C7B95ED006D170A /* IPadHomeView.swift */; };
+		110982932C7B95ED006D170A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109828B2C7B95ED006D170A /* HomeInteractor.swift */; };
+		110982942C7B95ED006D170A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109828C2C7B95ED006D170A /* HomeView.swift */; };
+		110982952C7B95ED006D170A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109828D2C7B95ED006D170A /* HomeModel.swift */; };
+		110982962C7B95ED006D170A /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109828E2C7B95ED006D170A /* HomeConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +93,14 @@
 		1109827D2C7B951B006D170A /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		1109827F2C7B955B006D170A /* ReachabilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
 		110982812C7B9570006D170A /* ErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
+		110982872C7B95ED006D170A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		110982882C7B95ED006D170A /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		110982892C7B95ED006D170A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1109828A2C7B95ED006D170A /* IPadHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPadHomeView.swift; sourceTree = "<group>"; };
+		1109828B2C7B95ED006D170A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		1109828C2C7B95ED006D170A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1109828D2C7B95ED006D170A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		1109828E2C7B95ED006D170A /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +220,7 @@
 		110982502C7B8D23006D170A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				110982832C7B95C4006D170A /* Home */,
 				110982582C7B8E40006D170A /* README.md */,
 			);
 			path = Scenes;
@@ -295,6 +312,45 @@
 				1109827D2C7B951B006D170A /* View+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		110982832C7B95C4006D170A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				110982842C7B95CD006D170A /* View */,
+				110982892C7B95ED006D170A /* HomeViewController.swift */,
+				1109828B2C7B95ED006D170A /* HomeInteractor.swift */,
+				110982872C7B95ED006D170A /* HomePresenter.swift */,
+				1109828D2C7B95ED006D170A /* HomeModel.swift */,
+				110982882C7B95ED006D170A /* HomeRouter.swift */,
+				1109828E2C7B95ED006D170A /* HomeConfigurator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		110982842C7B95CD006D170A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				110982862C7B95DB006D170A /* iPad */,
+				110982852C7B95D4006D170A /* iPhone */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		110982852C7B95D4006D170A /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				1109828C2C7B95ED006D170A /* HomeView.swift */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		110982862C7B95DB006D170A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				1109828A2C7B95ED006D170A /* IPadHomeView.swift */,
+			);
+			path = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +486,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				110982762C7B9311006D170A /* WeatherAlert.swift in Sources */,
+				1109828F2C7B95ED006D170A /* HomePresenter.swift in Sources */,
+				110982902C7B95ED006D170A /* HomeRouter.swift in Sources */,
+				110982912C7B95ED006D170A /* HomeViewController.swift in Sources */,
+				110982922C7B95ED006D170A /* IPadHomeView.swift in Sources */,
+				110982932C7B95ED006D170A /* HomeInteractor.swift in Sources */,
+				110982942C7B95ED006D170A /* HomeView.swift in Sources */,
+				110982952C7B95ED006D170A /* HomeModel.swift in Sources */,
+				110982962C7B95ED006D170A /* HomeConfigurator.swift in Sources */,
 				110982262C7B8C86006D170A /* ContentView.swift in Sources */,
 				110982632C7B91F0006D170A /* Forecast.swift in Sources */,
 				110982692C7B9222006D170A /* DailyWeather.swift in Sources */,
