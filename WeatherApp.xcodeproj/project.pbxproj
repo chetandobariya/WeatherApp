@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		110982242C7B8C86006D170A /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982232C7B8C86006D170A /* WeatherAppApp.swift */; };
-		110982262C7B8C86006D170A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982252C7B8C86006D170A /* ContentView.swift */; };
 		110982282C7B8C88006D170A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110982272C7B8C88006D170A /* Assets.xcassets */; };
 		1109822B2C7B8C88006D170A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1109822A2C7B8C88006D170A /* Preview Assets.xcassets */; };
 		110982352C7B8C89006D170A /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110982342C7B8C89006D170A /* WeatherAppTests.swift */; };
@@ -60,7 +59,6 @@
 /* Begin PBXFileReference section */
 		110982202C7B8C86006D170A /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		110982232C7B8C86006D170A /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
-		110982252C7B8C86006D170A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		110982272C7B8C88006D170A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1109822A2C7B8C88006D170A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		110982302C7B8C89006D170A /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				110982552C7B8DFD006D170A /* README.md */,
-				110982252C7B8C86006D170A /* ContentView.swift */,
 				110982232C7B8C86006D170A /* WeatherAppApp.swift */,
 				110982772C7B93F1006D170A /* Constants.swift */,
 			);
@@ -494,7 +491,6 @@
 				110982942C7B95ED006D170A /* HomeView.swift in Sources */,
 				110982952C7B95ED006D170A /* HomeModel.swift in Sources */,
 				110982962C7B95ED006D170A /* HomeConfigurator.swift in Sources */,
-				110982262C7B8C86006D170A /* ContentView.swift in Sources */,
 				110982632C7B91F0006D170A /* Forecast.swift in Sources */,
 				110982692C7B9222006D170A /* DailyWeather.swift in Sources */,
 				110982722C7B927B006D170A /* PreviewDevice.swift in Sources */,
