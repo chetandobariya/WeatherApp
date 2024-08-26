@@ -1,5 +1,6 @@
 # WeatherApp
 
+This project is built with SwiftUI   and VIP clean architecture.
 
 ## Building the Project
 
